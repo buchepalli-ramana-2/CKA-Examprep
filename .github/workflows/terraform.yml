@@ -47,7 +47,7 @@ jobs:
       working-directory: "CKA-infrasetup-terraform"
 
     # Planning the terraform configuration
-    - name: Terraform init
+    - name: Terraform plan
       id: plan
       shell: bash
       continue-on-error: false
