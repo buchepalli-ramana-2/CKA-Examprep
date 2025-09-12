@@ -1,4 +1,4 @@
-
+/*
 resource "azurerm_windows_virtual_machine" "client_vm" {
   name                = "client-vm"
   resource_group_name = azurerm_resource_group.rg.name
@@ -86,3 +86,4 @@ resource "azurerm_linux_virtual_machine" "worker_node2" {
     version   = "latest"
   }
 }
+*/

@@ -8,6 +8,7 @@ resource "azurerm_resource_group" "rg" {
   location = "East US"
 }
 
+/*
 resource "azurerm_virtual_network" "vnet" {
   name                = "cka-vnet"
   address_space       = ["10.0.0.0/16"]
@@ -84,3 +85,4 @@ resource "azurerm_network_interface" "worker2_nic" {
     private_ip_address_allocation = "Dynamic"
   }
 }
+*/
