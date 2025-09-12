@@ -33,5 +33,17 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+    
+    # Initialize the terraform workspace
+    - name: Terraform init
+      id: init
+      shell: bash
+      env:
+          ARM_CLIENT_ID: ${{ secrets.AZ_SP_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.AZ_SP_CLIENT_SECRET }}
+          ARM_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZ_SUBSCRIPTION_ID }}
+      run: terraform init
+      working-directory: "CKA-infrasetup-terraform"
 
 
